@@ -1,0 +1,32 @@
+[
+  {
+    "model": "fleamarketplace.market",
+    "pk": 1,
+    "fields": {
+      "name": "Chelsea Flea Market, NY 10010",
+      "address": "West 25th Street Market<br/>between Broadway and 6th Avenue<br/>W 25th St",
+      "latitude": 40.7433962,
+      "longitude": -73.9904416
+    }
+  },
+  {
+    "model": "fleamarketplace.market",
+    "pk": 2,
+    "fields": {
+      "name": "Hell's Kitchen Flea Market, NY 10018",
+      "address": "W. 39th St. & Ninth Ave.",
+      "latitude": 40.7565386,
+      "longitude": -73.9940357
+    }
+  },
+  {
+    "model": "fleamarketplace.market",
+    "pk": 3,
+    "fields": {
+      "name": "Fort Greene Flea, Brooklyn 11238",
+      "address": "176 Lafayette Ave, Fort Greene Flea, Brooklyn, NY 11238",
+      "latitude": 40.688156,
+      "longitude": -73.973587
+    }
+  }
+]

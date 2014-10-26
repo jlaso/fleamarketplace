@@ -1,0 +1,49 @@
+{% load staticfiles %}
+<html>
+
+<head>
+
+</head>
+
+
+<body>
+
+<h1>Flea Market Place</h1>
+
+<h2>Markets</h2>
+
+<ul>
+{% for market in markets %}
+    <li>{{ market.id }} &nbsp; {{ market.name}}</li>
+{% endfor %}
+</ul>
+
+<h2>Products</h2>
+<table border="1">
+    <tr>
+        <td>ID</td>
+        <td>Market</td>
+        <td>Description</td>
+        <td>Media</td>
+        <td>Condition</td>
+        <td>Price</td>
+    </tr>
+    {% for product in products %}
+    <tr>
+        <td>{{ product.id }}</td>
+        <td><span title="{{ product.market.name }}">{{ product.market.id }}</span></td>
+        <td>{{ product.description }}</td>
+        <td>
+        {% for image in product.images %}
+        <img src="/static/media/{{  product.id }}/{{ image }}" width="100px"/>
+        {% endfor %}
+        </td>
+        <td>{{ product.condition }}</td>
+        <td>{{ product.price }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+</body>
+
+</html>

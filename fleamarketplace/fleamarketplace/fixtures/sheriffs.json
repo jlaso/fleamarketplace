@@ -1,0 +1,24 @@
+[
+  {
+    "model": "fleamarketplace.sheriff",
+    "pk": 1,
+    "fields": {
+      "first_name": "Matias",
+      "last_name": "Penas",
+      "phone": "631 565 99 53",
+      "nick": "mpenas",
+      "schedule": "Sa,Su 9:00am-2:00pm"
+    }
+  },
+  {
+    "model": "fleamarketplace.sheriff",
+    "pk": 2,
+    "fields": {
+      "first_name": "Patrick",
+      "last_name": "Laso",
+      "phone": "347 601 30 30",
+      "nick": "jlaso",
+      "schedule": "Sa,Su 9:00am-2:00pm"
+    }
+  }
+]
