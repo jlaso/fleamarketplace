@@ -1,0 +1,79 @@
+[
+  {
+    "model": "fleamarketplace.category",
+    "pk": 1,
+    "fields": {
+      "name": "Porcelain"
+    }
+  },
+  {
+    "model": "fleamarketplace.category",
+    "pk": 2,
+    "fields": {
+      "name": "Pottery"
+    }
+  },
+  {
+    "model": "fleamarketplace.category",
+    "pk": 3,
+    "fields": {
+      "name": "Clocks"
+    }
+  },
+  {
+    "model": "fleamarketplace.category",
+    "pk": 4,
+    "fields": {
+      "name": "Metalware"
+    }
+  },
+  {
+    "model": "fleamarketplace.category",
+    "pk": 5,
+    "fields": {
+      "name": "Rugs"
+    }
+  },
+  {
+    "model": "fleamarketplace.category",
+    "pk": 6,
+    "fields": {
+      "name": "Music"
+    }
+  },
+  {
+    "model": "fleamarketplace.category",
+    "pk": 7,
+    "fields": {
+      "name": "Books"
+    }
+  },
+  {
+    "model": "fleamarketplace.category",
+    "pk": 8,
+    "fields": {
+      "name": "Maps"
+    }
+  },
+  {
+    "model": "fleamarketplace.category",
+    "pk": 9,
+    "fields": {
+      "name": "Handycraft"
+    }
+  },
+  {
+    "model": "fleamarketplace.category",
+    "pk": 10,
+    "fields": {
+      "name": "Vintage"
+    }
+  },
+  {
+    "model": "fleamarketplace.category",
+    "pk": 11,
+    "fields": {
+      "name": "Photography"
+    }
+  }
+]

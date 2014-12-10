@@ -4,6 +4,7 @@
     "pk": 1,
     "fields": {
       "market": 3,
+      "category": 10,
       "description": "Neon sign 'Welcome to Miller Time'",
       "price": 800,
       "condition": "used"
@@ -14,6 +15,7 @@
     "pk": 2,
     "fields": {
       "market": 3,
+      category: 6,
       "description": "HiFi inside a vintage suitcase, various models",
       "price": 400,
       "condition": "new"
@@ -24,6 +26,7 @@
     "pk": 3,
     "fields": {
       "market": 3,
+      "category": 9,
       "description": "Saxo on a picture, 3D",
       "price": 600,
       "condition": "new"
@@ -34,6 +37,7 @@
     "pk": 4,
     "fields": {
       "market": 3,
+      "category": 2,
       "description": "Piggy savings bank",
       "price": 100,
       "condition": "used"
@@ -44,6 +48,7 @@
     "pk": 5,
     "fields": {
       "market": 3,
+      "category": 9,
       "description": "Metallic hand made dog",
       "price": 200,
       "condition": "new"
@@ -54,6 +59,7 @@
     "pk": 6,
     "fields": {
       "market": 3,
+      "category": 9,
       "description": "Floor lamp made with a wash basic",
       "price": 350,
       "condition": "new"
@@ -64,6 +70,7 @@
     "pk": 7,
     "fields": {
       "market": 3,
+      "category": 11,
       "description": "Polaroid (working)",
       "price": 60,
       "condition": "used"
@@ -74,6 +81,7 @@
     "pk": 8,
     "fields": {
       "market": 3,
+      "category": 10,
       "description": "Vintage photo camera (doesn't works)",
       "price": 600,
       "condition": "used"
@@ -84,6 +92,7 @@
     "pk": 9,
     "fields": {
       "market": 3,
+      "category": 10,
       "description": "Sign 'WANTED FOR VAGRANCY, REWARD 50c EACH'",
       "price": 200,
       "condition": "used"
@@ -94,6 +103,7 @@
     "pk": 10,
     "fields": {
       "market": 3,
+      "category": 11,
       "description": "Polaroid (working)",
       "price": 75,
       "condition": "used"
@@ -104,6 +114,7 @@
     "pk": 11,
     "fields": {
       "market": 3,
+      "category": 10,
       "description": "Vintage photo camera w/flash (doesn't works)",
       "price": 800,
       "condition": "used"

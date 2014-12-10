@@ -15,12 +15,16 @@ class Market(models.Model):
     latitude = models.FloatField()
     longitude = models.FloatField()
 
+class Category(models.Model):
+    name = models.CharField(max_length=50)
+
 class Product(models.Model):
     CONDITION = (
         ('new', 'New'),
         ('needs', 'needs repair'),
         ('good', 'good'),
     )
+    category = models.ForeignKey(Category)
     market = models.ForeignKey(Market)
     description = models.CharField(max_length=300)
     price = models.FloatField()

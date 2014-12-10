@@ -26,6 +26,7 @@ def index(request):
 
     for p in products:
         p.images = getImageList(p.id)
+        p.image = p.images[0]
 
     response = render(
         request,

@@ -1,49 +1,603 @@
 {% load staticfiles %}
+<!DOCTYPE HTML>
 <html>
 
 <head>
+    <title>Persoanl Flea - We found the best stuff at Flea Markets</title>
+    <!-- meta info -->
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta name="keywords" content="Koupon HTML5 Template" />
+    <meta name="description" content="Koupon - Premiun HTML5 Template for Coupons Website">
+    <meta name="author" content="Tsoy">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300' rel='stylesheet' type='text/css'>
+    <!-- Bootstrap styles -->
+    <link rel="stylesheet" href="/static/theme/css/boostrap.css">
+    <!-- Font Awesome styles (icons) -->
+    <link rel="stylesheet" href="/static/theme/css/font_awesome.css">
+    <!-- Main Template styles -->
+    <link rel="stylesheet" href="/static/theme/css/styles.css">
+    <!-- IE 8 Fallback -->
+    <!--[if lt IE 9]>
+	<link rel="stylesheet" type="text/css" href="/static/theme/css/ie.css" />
+<![endif]-->
+
+    <!-- Your custom styles (blank file) -->
+    <link rel="stylesheet" href="/static/theme/css/mystyles.css">
+
 
 </head>
 
+<body class="boxed bg-cover" style="background-image: url(/static/theme/img/backgrounds/wood.jpg)">
 
-<body>
 
-<h1>Flea Market Place</h1>
+    <div class="global-wrap">
 
-<h2>Markets</h2>
 
-<ul>
-{% for market in markets %}
-    <li>{{ market.id }} &nbsp; {{ market.name}}</li>
-{% endfor %}
-</ul>
+        <!-- //////////////////////////////////
+	//////////////MAIN HEADER/////////////
+	////////////////////////////////////-->
+        <header class="main main-white">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-2">
+                        <a href="index.html" class="logo">
+                            <!--<img src="img/logo-small-dark.png" alt="Image Alternative text" title="Image Title" />-->
+                            <p class="logo-text">Personal Flea</p>
+                        </a>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="flexnav-menu-button" id="flexnav-menu-button">Menu</div>
+                        <nav>
+                            <ul class="nav nav-pills flexnav" id="flexnav" data-breakpoint="800">
+                                <li class="active"><a href="index.html">Home</a>
 
-<h2>Products</h2>
-<table border="1">
-    <tr>
-        <td>ID</td>
-        <td>Market</td>
-        <td>Description</td>
-        <td>Media</td>
-        <td>Condition</td>
-        <td>Price</td>
-    </tr>
-    {% for product in products %}
-    <tr>
-        <td>{{ product.id }}</td>
-        <td><span title="{{ product.market.name }}">{{ product.market.id }}</span></td>
-        <td>{{ product.description }}</td>
-        <td>
-        {% for image in product.images %}
-        <img src="/static/media/{{  product.id }}/{{ image }}" width="100px"/>
-        {% endfor %}
-        </td>
-        <td>{{ product.condition }}</td>
-        <td>{{ product.price }}</td>
-    </tr>
-    {% endfor %}
-</table>
+                                </li>
+                                <li><a href="category-page-shop.html">Flea Markets</a>
+                                    <ul>
+                                        <li><a href="category-page-shop.html">MIA - Lincoln Road Antique</a>
+                                        </li>
+                                        <li><a href="category-page-coupon.html">NY - Brooklyn Flea</a>
+                                        </li>
+                                        <li><a href="category-page-shop.html">PAS - Rose Bowl </a>
+                                        </li>
+                                        <li><a href="category-page-coupon.html">MAS - Brimfield</a>
+                                        </li>
+                                        <li><a href="category-page-shop.html">FLO - Renninger's</a>
+                                        </li>
+                                        <li><a href="category-page-coupon.html">TEX - Austin Country</a>
+                                        </li>
+                                        <li><a href="category-page-shop.html">NJ - Golden Nugget</a>
+                                        </li>
+                                        <li><a href="category-page-coupon.html">LA - Melrose Trading Post</a>
+                                        </li>
+                                    </ul>
+                                </li>
 
+
+                            </ul>
+                        </nav>
+                    </div>
+                    <!--<div class="col-md-4">
+                        <ul class="login-register">
+                            <li class="shopping-cart shopping-cart-white"><a href="page-cart.html"><i class="fa fa-shopping-cart"></i>My Cart</a>
+                                <div class="shopping-cart-box">
+                                    <ul class="shopping-cart-items">
+                                        <li>
+                                            <a href="product-shop-sidebar.html">
+                                                <img src="img/70x70.png" alt="Image Alternative text" title="AMaze" />
+                                                <h5>New Glass Collection</h5><span class="shopping-cart-item-price">$150</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="product-shop-sidebar.html">
+                                                <img src="img/70x70.png" alt="Image Alternative text" title="Gamer Chick" />
+                                                <h5>Playstation Accessories</h5><span class="shopping-cart-item-price">$170</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <ul class="list-inline text-center">
+                                        <li><a href="page-cart.html"><i class="fa fa-shopping-cart"></i> View Cart</a>
+                                        </li>
+                                        <li><a href="page-checkout.html"><i class="fa fa-check-square"></i> Checkout</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li><a class="popup-text" href="#login-dialog" data-effect="mfp-move-from-top"><i class="fa fa-sign-in"></i>Sign in</a>
+                            </li>
+                            <li><a class="popup-text" href="#register-dialog" data-effect="mfp-move-from-top"><i class="fa fa-edit"></i>Sign up</a>
+                            </li>
+                        </ul>
+                    </div>-->
+                </div>
+            </div>
+        </header>
+        <!-- LOGIN REGISTER LINKS CONTENT -->
+        <!--<div id="login-dialog" class="mfp-with-anim mfp-hide mfp-dialog clearfix">
+            <i class="fa fa-sign-in dialog-icon"></i>
+            <h3>Member Login</h3>
+            <h5>Welcome back, friend. Login to get started</h5>
+            <form class="dialog-form">
+                <div class="form-group">
+                    <label>E-mail</label>
+                    <input type="text" placeholder="email@domain.com" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" placeholder="My secret password" class="form-control">
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox">Remember me
+                    </label>
+                </div>
+                <input type="submit" value="Sign in" class="btn btn-primary">
+            </form>
+            <ul class="dialog-alt-links">
+                <li><a class="popup-text" href="#register-dialog" data-effect="mfp-zoom-out">Not member yet</a>
+                </li>
+                <li><a class="popup-text" href="#password-recover-dialog" data-effect="mfp-zoom-out">Forgot password</a>
+                </li>
+            </ul>
+        </div>-->
+
+
+        <!--<div id="register-dialog" class="mfp-with-anim mfp-hide mfp-dialog clearfix">
+            <i class="fa fa-edit dialog-icon"></i>
+            <h3>Member Register</h3>
+            <h5>Ready to get best offers? Let's get started!</h5>
+            <form class="dialog-form">
+                <div class="form-group">
+                    <label>E-mail</label>
+                    <input type="text" placeholder="email@domain.com" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" placeholder="My secret password" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>Repeat Password</label>
+                    <input type="password" placeholder="Type your password again" class="form-control">
+                </div>
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="form-group">
+                            <label>Your Area</label>
+                            <input type="password" placeholder="Boston" class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label>Postal/Zip</label>
+                            <input type="password" placeholder="12345" class="form-control">
+                        </div>
+                    </div>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox">Get hot offers via e-mail
+                    </label>
+                </div>
+                <input type="submit" value="Sign up" class="btn btn-primary">
+            </form>
+            <ul class="dialog-alt-links">
+                <li><a class="popup-text" href="#login-dialog" data-effect="mfp-zoom-out">Already member</a>
+                </li>
+            </ul>
+        </div>-->
+
+
+        <!--<div id="password-recover-dialog" class="mfp-with-anim mfp-hide mfp-dialog clearfix">
+            <i class="icon-retweet dialog-icon"></i>
+            <h3>Password Recovery</h3>
+            <h5>Fortgot your password? Don't worry we can deal with it</h5>
+            <form class="dialog-form">
+                <label>E-mail</label>
+                <input type="text" placeholder="email@domain.com" class="span12">
+                <input type="submit" value="Request new password" class="btn btn-primary">
+            </form>
+        </div>-->
+        <!-- END LOGIN REGISTER LINKS CONTENT -->
+
+
+        <!-- TOP AREA -->
+        <div class="top-area">
+            <div class="owl-carousel owl-slider" id="owl-carousel-slider" data-inner-pagination="true" data-white-pagination="true" data-nav="false">
+                <div>
+                    <div class="bg-holder">
+                        <img src="/static/theme/img/1200x480.png" alt="Image Alternative text" title="Bridge" />
+                        <div class="bg-mask"></div>
+                        <div class="bg-front vert-center text-white text-center">
+                            <h2 class="text-hero">New York - Brooklyn Flea</h2>
+                            <div class="countdown countdown-big" data-countdown="JulOct 2, 2014 6:35:42"></div><a class="btn btn-lg btn-ghost btn-white" href="#">Be ready!</a>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="bg-holder">
+                        <img src="/static/theme/img/1200x480.png" alt="Image Alternative text" title="4 Strokes of Fun" />
+                        <div class="bg-mask"></div>
+                        <div class="bg-front vert-center text-white text-center">
+                            <h2 class="text-hero">Miami - Lincoln Road Antique</h2>
+                            <div class="countdown countdown-big" data-countdown="Oct 2, 2014 5:30:00"></div><a class="btn btn-lg btn-ghost btn-white" href="#">Be ready!</a>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="bg-holder">
+                        <img src="/static/theme/img/1200x480.png" alt="Image Alternative text" title="LHOTEL PORTO BAY SAO PAULO luxury suite" />
+                        <div class="bg-mask"></div>
+                        <div class="bg-front vert-center text-white text-center">
+                            <h2 class="text-hero">Los Angeles - Melrose Trading Post</h2>
+                            <div class="countdown countdown-big" data-countdown="Jul 11, 2014 5:30:00"></div><a class="btn btn-lg btn-ghost btn-white" href="#">Be ready!</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END TOP AREA -->
+
+        <!-- SEARCH AREA -->
+        <form class="search-area form-group">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 clearfix">
+                        <label><i class="fa fa-search"></i><span>I am searching for</span>
+                        </label>
+                        <div class="search-area-division search-area-division-input">
+                            <input class="form-control" type="text" placeholder="Travel Vacation" />
+                        </div>
+                    </div>
+                    <div class="col-md-3 clearfix">
+                        <label><i class="fa fa-map-marker"></i><span>In</span>
+                        </label>
+                        <div class="search-area-division search-area-division-location">
+                            <input class="form-control" type="text" placeholder="Boston" />
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                        <button class="btn btn-block btn-white search-btn" type="submit">Search</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <!-- END SEARCH AREA -->
+
+        <div class="gap"></div>
+
+
+        <!-- //////////////////////////////////
+	//////////////END MAIN HEADER//////////
+	////////////////////////////////////-->
+
+
+        <!-- //////////////////////////////////
+	//////////////PAGE CONTENT/////////////
+	////////////////////////////////////-->
+
+
+
+
+
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <aside class="sidebar-left">
+                        <h3 class="mb20">I am Looking In</h3>
+                        <ul class="nav nav-tabs nav-stacked nav-coupon-category nav-coupon-category-left">
+                            {% for market in markets %}
+                                <li><a href="#?market={{ market.id }}"><i class="fa fa-cutlery"></i>{{ market.name }}</li>
+                            {% endfor %}
+                        </ul>
+                    </aside>
+                </div>
+                <div class="col-md-9">
+                    <h1 class="mb20">Featured <small><a href="#">View All</a></small></h1>
+
+                    <!--
+                    <div class="row row-wrap">
+                        <a class="col-md-4" href="#">
+                            <div class="product-thumb">
+                                <header class="product-header">
+                                    <img src="/static/theme/img/800x600.png" alt="Image Alternative text" title="the best mode of transport here in maldives" />
+                                </header>
+                                <div class="product-inner">
+                                    <h5 class="product-title">Finshing in Maldives</h5>
+                                    <p class="product-desciption">Habitant class blandit arcu parturient at litora per</p>
+                                    <div class="product-meta"><span class="product-time"><i class="fa fa-clock-o"></i> Oct 2, 8am-6pm</span>
+                                        <ul class="product-price-list">
+                                            <li><span class="product-price">$350</span>
+                                            </li>
+                                            <li><span class="product-save">CALL 555-458719</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <p class="product-location"><i class="fa fa-map-marker"></i> Brooklyn</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a class="col-md-4" href="#">
+                            <div class="product-thumb">
+                                <header class="product-header">
+                                    <img src="/static/theme/img/800x600.png" alt="Image Alternative text" title="Green Furniture" />
+                                </header>
+                                <div class="product-inner">
+                                    <h5 class="product-title">Finshing in Maldives</h5>
+                                    <p class="product-desciption">Habitant class blandit arcu parturient at litora per</p>
+                                    <div class="product-meta"><span class="product-time"><i class="fa fa-clock-o"></i> Oct 2, 8am-6pm</span>
+                                        <ul class="product-price-list">
+                                            <li><span class="product-price">$350</span>
+                                            </li>
+                                            <li><span class="product-save">CALL 555-458719</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <p class="product-location"><i class="fa fa-map-marker"></i> Brooklyn</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a class="col-md-4" href="#">
+                            <div class="product-thumb">
+                                <header class="product-header">
+                                    <img src="/static/theme/img/800x600.png" alt="Image Alternative text" title="Our Coffee miss u" />
+                                </header>
+                                <div class="product-inner">
+                                    <h5 class="product-title">Finshing in Maldives</h5>
+                                    <p class="product-desciption">Habitant class blandit arcu parturient at litora per</p>
+                                    <div class="product-meta"><span class="product-time"><i class="fa fa-clock-o"></i> Oct 2, 8am-6pm</span>
+                                        <ul class="product-price-list">
+                                            <li><span class="product-price">$350</span>
+                                            </li>
+                                            <li><span class="product-save">CALL 555-458719</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <p class="product-location"><i class="fa fa-map-marker"></i> Brooklyn</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    -->
+                </div>
+            </div>
+            <div class="gap gap-small"></div>
+            <h1 class="mb20">New Deals <small><a href="#">View All</a></small></h1>
+            <div class="row row-wrap">
+                    {% for product in products %}
+
+
+
+                <a class="col-md-4" href="#">
+                    <div class="product-thumb">
+                        <header class="product-header">
+                            <img src="/static/media/{{  product.id }}/{{ product.image }}" alt="Image Alternative text" title="AMaze"  width="800px" height="400px"/>
+                        </header>
+                        <div class="product-inner">
+                                    <h5 class="product-title">{{ product.description }}</h5>
+                                    <p class="product-desciption">{{ product.description }}</p>
+                                    <div class="product-meta"><span class="product-time"><i class="fa fa-clock-o"></i> Oct 2, 8am-6pm</span>
+                                        <ul class="product-price-list">
+                                            <li><span class="product-price">${{ product.price }}</span>
+                                            </li>
+                                            <li><span class="product-save">{{ product.condition }}</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <p class="product-location"><i class="fa fa-map-marker"></i> {{ product.market.name }}</p>
+                                </div>
+                            </div>
+                        </a>
+                {% endfor %}
+
+            </div>
+            <div class="row row-wrap">
+                <a class="col-md-3" href="#">
+                    <div class="product-thumb">
+                        <header class="product-header">
+                            <img src="/static/theme/img/800x600.png" alt="Image Alternative text" title="Food is Pride" />
+                        </header>
+                        <div class="product-inner">
+                                    <h5 class="product-title">Finshing in Maldives</h5>
+                                    <p class="product-desciption">Habitant class blandit arcu parturient at litora per</p>
+                                    <div class="product-meta"><span class="product-time"><i class="fa fa-clock-o"></i> Oct 2, 8am-6pm</span>
+                                        <ul class="product-price-list">
+                                            <li><span class="product-price">$350</span>
+                                            </li>
+                                            <li><span class="product-save">CALL 555-458719</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <p class="product-location"><i class="fa fa-map-marker"></i> Brooklyn</p>
+                                </div>
+                            </div>
+                        </a>
+                <a class="col-md-3" href="#">
+                    <div class="product-thumb">
+                        <header class="product-header">
+                            <img src="/static/theme/img/800x600.png" alt="Image Alternative text" title="The Hidden Power of the Heart" />
+                        </header>
+                        <div class="product-inner">
+                                    <h5 class="product-title">Finshing in Maldives</h5>
+                                    <p class="product-desciption">Habitant class blandit arcu parturient at litora per</p>
+                                    <div class="product-meta"><span class="product-time"><i class="fa fa-clock-o"></i> Oct 2, 8am-6pm</span>
+                                        <ul class="product-price-list">
+                                            <li><span class="product-price">$350</span>
+                                            </li>
+                                            <li><span class="product-save">CALL 555-458719</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <p class="product-location"><i class="fa fa-map-marker"></i> Brooklyn</p>
+                                </div>
+                            </div>
+                        </a>
+                <a class="col-md-3" href="#">
+                    <div class="product-thumb">
+                        <header class="product-header">
+                            <img src="/static/theme/img/800x600.png" alt="Image Alternative text" title="iPhone 5 iPad mini iPad 3" />
+                        </header>
+                        <div class="product-inner">
+                                    <h5 class="product-title">Finshing in Maldives</h5>
+                                    <p class="product-desciption">Habitant class blandit arcu parturient at litora per</p>
+                                    <div class="product-meta"><span class="product-time"><i class="fa fa-clock-o"></i> Oct 2, 8am-6pm</span>
+                                        <ul class="product-price-list">
+                                            <li><span class="product-price">$350</span>
+                                            </li>
+                                            <li><span class="product-save">CALL 555-458719</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <p class="product-location"><i class="fa fa-map-marker"></i> Brooklyn</p>
+                                </div>
+                            </div>
+                        </a>
+                <a class="col-md-3" href="#">
+                    <div class="product-thumb">
+                        <header class="product-header">
+                            <img src="/static/theme/img/800x600.png" alt="Image Alternative text" title="Old No7" />
+                        </header>
+                        <div class="product-inner">
+                                    <h5 class="product-title">Finshing in Maldives</h5>
+                                    <p class="product-desciption">Habitant class blandit arcu parturient at litora per</p>
+                                    <div class="product-meta"><span class="product-time"><i class="fa fa-clock-o"></i> Oct 2, 8am-6pm</span>
+                                        <ul class="product-price-list">
+                                            <li><span class="product-price">$350</span>
+                                            </li>
+                                            <li><span class="product-save">CALL 555-458719</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <p class="product-location"><i class="fa fa-map-marker"></i> Brooklyn</p>
+                                </div>
+                            </div>
+                        </a>
+            </div>
+            <div class="gap gap-small"></div>
+        </div>
+
+
+        <!-- //////////////////////////////////
+	//////////////END PAGE CONTENT/////////
+	////////////////////////////////////-->
+
+
+
+        <!-- //////////////////////////////////
+	//////////////MAIN FOOTER//////////////
+	////////////////////////////////////-->
+
+        <footer class="main">
+            <div class="footer-top-area">
+                <div class="container">
+                    <div class="row row-wrap">
+                        <div class="col-md-4">
+                            <a href="index.html">
+                                <h4 class="logo-text">Personal Flea</h4>
+                            </a>
+                            <ul class="list list-social">
+                                <li>
+                                    <a class="fa fa-facebook box-icon" href="#" data-toggle="tooltip" title="Facebook"></a>
+                                </li>
+                                <li>
+                                    <a class="fa fa-twitter box-icon" href="#" data-toggle="tooltip" title="Twitter"></a>
+                                </li>
+                                <li>
+                                    <a class="fa fa-flickr box-icon" href="#" data-toggle="tooltip" title="Flickr"></a>
+                                </li>
+                            </ul>
+                            <p>We found the best antiques and special items on the best FLea Market on the earth.</p>
+                        </div>
+                        <div class="col-md-4">
+                            <h4>Sign Up to the Newsletter</h4>
+                            <div class="box">
+                                <form>
+                                    <div class="form-group mb10">
+                                        <label>E-mail</label>
+                                        <input type="text" class="form-control" />
+                                    </div>
+                                    <p class="mb10">We do not Spam</p>
+                                    <input type="submit" class="btn btn-primary" value="Sign Up" />
+                                </form>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <h4>Personal Flea on Twitter</h4>
+                            <!-- START TWITTER -->
+                            <div class="twitter-ticker" id="twitter-ticker"></div>
+                            <!-- END TWITTER -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <p>Copyright © 2014, Personal Flea, All Rights Reserved</p>
+                        </div>
+                        <div class="col-md-6 col-md-offset-2">
+                            <div class="pull-right">
+                                <ul class="list-inline list-payment">
+                                    <li>
+                                        <img src="img/payment/american-express-curved-32px.png" alt="Image Alternative text" title="Image Title" />
+                                    </li>
+                                    <li>
+                                        <img src="img/payment/cirrus-curved-32px.png" alt="Image Alternative text" title="Image Title" />
+                                    </li>
+                                    <li>
+                                        <img src="img/payment/discover-curved-32px.png" alt="Image Alternative text" title="Image Title" />
+                                    </li>
+                                    <li>
+                                        <img src="img/payment/ebay-curved-32px.png" alt="Image Alternative text" title="Image Title" />
+                                    </li>
+                                    <li>
+                                        <img src="img/payment/maestro-curved-32px.png" alt="Image Alternative text" title="Image Title" />
+                                    </li>
+                                    <li>
+                                        <img src="img/payment/mastercard-curved-32px.png" alt="Image Alternative text" title="Image Title" />
+                                    </li>
+                                    <li>
+                                        <img src="img/payment/visa-curved-32px.png" alt="Image Alternative text" title="Image Title" />
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- //////////////////////////////////
+	//////////////END MAIN  FOOTER/////////
+	////////////////////////////////////-->
+
+
+
+        <!-- Scripts queries -->
+        <script src="/static/theme/js/jquery.js"></script>
+        <script src="/static/theme/js/boostrap.min.js"></script>
+        <script src="/static/theme/js/countdown.min.js"></script>
+        <script src="/static/theme/js/flexnav.min.js"></script>
+        <script src="/static/theme/js/magnific.js"></script>
+        <script src="/static/theme/js/tweet.min.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+        <script src="/static/theme/js/fitvids.min.js"></script>
+        <script src="/static/theme/js/mail.min.js"></script>
+        <script src="/static/theme/js/ionrangeslider.js"></script>
+        <script src="/static/theme/js/icheck.js"></script>
+        <script src="/static/theme/js/fotorama.js"></script>
+        <script src="/static/theme/js/card-payment.js"></script>
+        <script src="/static/theme/js/owl-carousel.js"></script>
+        <script src="/static/theme/js/masonry.js"></script>
+        <script src="/static/theme/js/nicescroll.js"></script>
+
+        <!-- Custom scripts -->
+        <script src="/static/theme/js/custom.js"></script>
+    </div>
 </body>
 
 </html>
+
